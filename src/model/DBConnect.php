@@ -10,7 +10,8 @@ class DBConnect
 
     public function __construct()
     {
-        $this->dsn = 'mysql:host=localhost;dbname=case_quanlythuvien';
+        $this->dsn = 'mysql:host=localhost;
+        dbname=case_quanlythuvien';
         $this->username = 'root';
         $this->password = '123456';
     }

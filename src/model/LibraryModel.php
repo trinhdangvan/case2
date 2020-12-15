@@ -12,12 +12,9 @@ class LibraryModel {
 
     public function getAll (){
 //        var_dump(1);die;
-        $sql = "SELECT * FROM books JOIN categorys on books.categoryNumber = categorys.categoryNumber
-                LIMIT 15";
+        $sql = "SELECT * FROM books JOIN categorys on books.categoryNumber = categorys.categoryNumber";
         $stmt = $this->database->query($sql);
-
         return $stmt->fetchAll();
-
     }
 
     public function getBookByID($id)
