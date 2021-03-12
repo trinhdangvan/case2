@@ -8,9 +8,12 @@
     <title>Document</title>
     <style>
         body {
-            background-image: url("img/anhcase2.jpg");
+            background-image: url("img/anhadd.jpg");
         }
-
+        a{
+            font-size:150%;
+            color: deeppink;
+        }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -27,37 +30,32 @@
 
                 <div class="form-group">
                     <label class="form-group">
-                    <h4 style="color: #FFFFFF">Name</h4>
+                        <h4 style="color: #FFFFFF">Name</h4>
                     </label>
                     <input type="text" class="form-control" name="name">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group">
-                    <h4 style="color: #FFFFFF">Author</h4>
+                        <h4 style="color: #FFFFFF">Author</h4>
                     </label>
                     <input type="text" class="form-control" name="author" >
                 </div>
 
                 <div class="form-group">
                     <label class="form-group">
-                    <h4 style="color: #FFFFFF">Img</h4>
+                        <h4 style="color: #FFFFFF">Img</h4>
                     </label><br>
                     <input type="file" name="img">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group">I
-                     <h4 style="color: #FFFFFF">Descibes</h4>
+                        <h4 style="color: #FFFFFF">Descibes</h4>
                     </label>
                     <input type="text" class="form-control" name="describes" >
                 </div>
 
-                <div class="form-group">
-                    <label class="form-group">
-                        <h4 style="color: #FFFFFF">categoryNumber</h4> </label>
-                    <input type="text" class="form-group" name="categoryNumber">
-                </div>
 
                 <div>
                     <button type="submit" class="btn-outline-success">CREATE</button>

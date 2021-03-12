@@ -47,7 +47,7 @@ switch ($page) {
         break;
 
     default :
-        include "login.php";
+        include "login1.php";
 }
 ?>
 

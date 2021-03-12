@@ -8,5 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Controller\\LibraryController' => $baseDir . '/src/controller/LibraryController.php',
     'App\\Model\\DBConnect' => $baseDir . '/src/model/DBConnect.php',
-    'App\\Model\\LibraryModel' => $baseDir . '/src/model/LibraryModel.php',
+    'App\\Model\\LibraryModel' => $baseDir . '/src/model/LibraryController.php',
 );

@@ -9,7 +9,7 @@
     <title>Document</title>
     <style>
         body {
-            background-image: url("img/.jpg");
+            background-image: url("img/sa.jpg");
         }
     </style>
 </head>

@@ -25,23 +25,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php?page=list-library">Mượn Sách <span class="sr-only">(current)</span></a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="index.php?page=add">Thêm Sách</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Loại Sách
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Ngôn Tình</a>
-                    <a class="dropdown-item" href="#">Tâm Lý - Kỹ Năng Sống</a>
-                    <a class="dropdown-item" href="#">Phiêu lưu, tưởng tượng, thần bí</a>
-                    <a class="dropdown-item" href="#">kinh tế-quản lý</a>
-                    <a class="dropdown-item" href="#">Ngôn Tình, Đô Thi</a>
-            </li>
 
         </ul>
         <form  action="index.php?page=search" class="form-inline my-2 my-lg-0" method="post">
@@ -50,57 +38,47 @@
         </form>
     </div>
 </nav>
-<!--<div>-->
-<!--    <a href="index.php?page=add">add</a>-->
-<!--</div>-->
-<!--<div>-->
-<!--    <form method="post" action="index.php?page=search">-->
-<!--        <input type="text" placeholder="search" name="search" id="myInput"/>-->
-<!--        <button type="submit">timkiem</button>-->
-<!--    </form>-->
-<!--</div>-->
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">IMG</th>
+        <th scope="col">Describes</th>
+        <th scope="col"></th>
 
-    <table class="table table-hover">
-        <thead>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($librarys as $key => $library): ?>
+
         <tr>
-            <th scope="col">STT</th>
-            <th scope="col">Name</th>
-            <th scope="col">Author</th>
-            <th scope="col">IMG</th>
-            <th scope="col">Describes</th>
-            <th scope="col"></th>
+            <td><?php echo ++$key ?></td>
+            <!--        <td>-->
+            <!--            <a href="index.php?page=show-library&id=--><?php //echo $library['book_Name'] ?><!--"-->
+            <!--            --><?php //echo $library['book_Name'] ?>
+            <!--        </td>-->
+            <td> <?php echo $library['bookName'] ?> </td>
+            <td> <?php echo $library['author'] ?> </td>
+            <td style="width: 100px">
+                <img src="img/<?php echo $library['comment'] ?>" style="width: 100px" >
+            </td>
+            <td> <?php echo $library['describes'] ?> </td>
+            <td> <a href="index.php?page=delete&id=<?php echo $library['bookNumber']?>">
+                    <button type="button" class="btn btn-outline-light" onclick="return confirm('Are you sure you want to delete this item')">Delete</button>
+                </a> </td>
+            <td>
+                <div>
+                    <a href="index.php?page=update&id=<?php echo $library['bookNumber'] ?>">
+                        <button type="button" class="btn btn-outline-light">Update</button>
+                    </a>
+                </div>
+            </td>
 
         </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($librarys as $key => $library): ?>
-
-            <tr>
-                <td><?php echo ++$key ?></td>
-                <!--        <td>-->
-                <!--            <a href="index.php?page=show-library&id=--><?php //echo $library['book_Name'] ?><!--"-->
-                <!--            --><?php //echo $library['book_Name'] ?>
-                <!--        </td>-->
-                <td> <?php echo $library['bookName'] ?> </td>
-                <td> <?php echo $library['author'] ?> </td>
-                <td style="width: 100px">
-                    <img src="img/<?php echo $library['comment'] ?>" style="width: 100px" >
-                </td>
-                <td> <?php echo $library['describes'] ?> </td>
-                <td> <a href="index.php?page=delete&id=<?php echo $library['bookNumber']?>">
-                        <button type="button" class="btn btn-outline-light" onclick="return confirm('Are you sure you want to delete this item')">Delete</button>
-                    </a> </td>
-                <td>
-                    <div>
-                        <a href="index.php?page=update&id=<?php echo $library['bookNumber'] ?>">
-                            <button type="button" class="btn btn-outline-light">Update</button>
-                        </a>
-                    </div>
-                </td>
-
-            </tr>
-        <?php endforeach; ?>
-    </table>
+    <?php endforeach; ?>
+</table>
 <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
 
